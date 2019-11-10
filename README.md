@@ -7,9 +7,9 @@
 ### Author: Student/Group Name
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
+* [submission PR](https://github.com/heyerthb/lab-16-event-driven-app/pull/1)
+* [travis](https://travis-ci.com/heyerthb/lab-16-event-driven-app)
+* [heroku](https://dashboard.heroku.com/apps/heyert-lab-16-event-driven-app/deploy/github)
 * [front-end](http://xyz.com) (when applicable)
 
 #### Documentation
