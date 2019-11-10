@@ -1,26 +1,19 @@
 'use strict';
 
-const {readFile, writeFile} = require('fs');
-// const events = require('./modules/events');
-// const util = require('util');
-// const readPromise = util.promisify(fs.readFile);
-// const writePromise = util.promisify(fs.writeFile);
+exports.readFile = (file, cb) => {
+  if(!file || file.match(/bad/i)){
+    cb('invalid file');
+  }else {
+    cb(undefined, new Buffer ('File Content'));
+  }
+};
 
-let file = process.argv.slice(2).shift();
-
-async function reader(text){
-  await readFile(file, 'utf8', text, (error, data) => {
-    if (error) {throw error;}
-  });
-}
-
-async function writer(text){
-  await writeFile(file, Buffer.from(text), (error, data) =>{
-    if(error){throw error;}
-  });
-}
-
-exports.lowerText = (text) => text.toString().toUpperCase();
-
-module.exports = {reader, writer};
-
+exports.writeFile = (file, buffer, cb) => {
+  if(!file || file.match(/bad/i)){
+    cb('invalid file');
+  }else if (Buffer.isBuffer(buffer)){
+    cb('invalid buffer');
+  }else {
+    cb('undefined', undefined);
+  }
+};
